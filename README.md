@@ -4,16 +4,18 @@
 
 The talk shows how a wheeled robot detects objects in real time with a YOLO-v3 deep neural network and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. This repository holds two versions of the deck: the one I presented at the defense, and a longer extended version.
 
-[Thesis report (LaTeX)](https://github.com/kamalkimahek14/MS-Thesis-Report) · [Portfolio: kamal-mehta.com](https://kamal-mehta.com) · [Compiled PDFs (Releases)](https://github.com/kamalkimahek14/MS-Thesis-Presentation/releases)
+### [Slides as presented (PDF, 59 pages)](presented/MS-Thesis-Presentation.pdf)
+
+[Thesis report (LaTeX)](https://github.com/kamalkimahek14/MS-Thesis-Report) · [Portfolio: kamal-mehta.com](https://kamal-mehta.com)
 
 ## Which deck is which
 
-| Folder | Status | Frames | Sections |
+| Folder | Status | PDF pages | Sections |
 |---|---|---|---|
-| [`presented/`](presented/) | **The version presented at the defense** | 48 | 11 sections, from motivation to future work |
-| [`extended/`](extended/) | Longer version with extra detail | 68 | the same 11, plus *Data Preprocessing* and *Testing Results* |
+| [`presented/`](presented/) | **The version presented at the defense** | 59 ([PDF](presented/MS-Thesis-Presentation.pdf)) | 11 sections, from motivation to future work |
+| [`extended/`](extended/) | Longer version with extra detail | 81 (build from source) | the same 11, plus *Data Preprocessing* and *Testing Results* sections |
 
-Both decks use the same figures, title page and bibliography. The extended deck adds a section on how the training data was prepared and a full section on test-set results (pie chart, confusion chart and example detections). The presented deck keeps the story tight for a timed talk and folds the key test numbers into *Training Results*.
+Both decks use the same figures, title page and bibliography. The extended deck gives data preparation its own section and adds a full section on test-set results (pie chart, confusion chart and example detections). The presented deck keeps the story tight for a timed talk: data preparation fits on one slide, and the key test numbers sit in *Training Results*.
 
 ## The problem
 
@@ -88,12 +90,13 @@ The output is `main.pdf` in the same folder. Packages used: `beamer` (Madrid the
 
 ```
 MS-Thesis-Presentation/
-├── presented/          # deck presented at the defense (48 frames)
+├── presented/          # deck presented at the defense
+│   ├── MS-Thesis-Presentation.pdf   # compiled slides (59 pages)
 │   ├── main.tex
 │   ├── ref.bib
 │   ├── UTA.png
 │   └── Images/         # slide figures
-├── extended/           # extended deck (68 frames)
+├── extended/           # extended deck
 │   ├── main.tex
 │   ├── ref.bib
 │   ├── UTA.png

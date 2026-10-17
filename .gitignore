@@ -22,3 +22,6 @@
 .DS_Store
 Thumbs.db
 *.swp
+
+# Local build output (the committed PDF is presented/MS-Thesis-Presentation.pdf)
+main.pdf

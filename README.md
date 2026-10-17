@@ -47,7 +47,6 @@ All numbers come from the thesis.
 | Camera intrinsic re-projection error | 0.37 pixels |
 | Fused position error in simulation | 0.42 m, 56% lower than the camera alone (0.97 m) |
 | Sensor rate on the robot | 41 Hz, camera and LiDAR synchronized |
-| Full detection + fusion on GPU | 1.44 s per frame (about 8 s on CPU) |
 
 ![Key results chart](docs/results.svg)
 

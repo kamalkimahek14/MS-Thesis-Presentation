@@ -1,8 +1,8 @@
-# MS Thesis Defense Slides: Real-time Object Detection and Camera–LiDAR Fusion
+# MS Thesis Defense Slides: Object Detection and Camera–LiDAR Fusion
 
 **LaTeX Beamer slides for my Master's thesis defense in Aerospace Engineering at The University of Texas at Arlington (June 2021).**
 
-The talk shows how a wheeled robot detects objects in real time with a YOLO-v3 deep neural network and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. This repository holds two versions of the deck: the one I presented at the defense, and a longer extended version.
+The talk shows how a wheeled robot detects objects with a YOLO-v3 deep neural network, live on the robot (about 1.44 s a frame for detection and position estimation on a GTX 1050; 59 ms average detection time per image in the offline test batch) and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. This repository holds two versions of the deck: the one I presented at the defense, and a longer extended version.
 
 ### [Slides as presented (PDF, 59 pages)](presented/MS-Thesis-Presentation.pdf)
 
@@ -19,7 +19,7 @@ Both decks use the same figures, title page and bibliography. The extended deck 
 
 ## The problem
 
-A ground robot that avoids collisions has to know **what** is in front of it and **where** it is, many times per second, on a small onboard computer. Region-based detectors such as R-CNN are accurate but too slow for that budget. A camera alone sees classes well but judges distance poorly; a LiDAR measures distance well but sees no color or texture. The thesis combines a fast single-shot detector with fusion of both sensors to get accurate, real-time object states.
+A ground robot that avoids collisions has to know **what** is in front of it and **where** it is, on a small onboard computer. Region-based detectors such as R-CNN are accurate but too slow for that budget. A camera alone sees classes well but judges distance poorly; a LiDAR measures distance well but sees no color or texture. The thesis combines a fast single-shot detector with fusion of both sensors to estimate object states.
 
 ## Approach
 
@@ -51,7 +51,7 @@ All numbers come from the thesis.
 ![Key results chart](docs/results.svg)
 
 <p align="center">
-  <img src="docs/realtime-detection.png" alt="Real-time detections with class, confidence and estimated distance" width="420">
+  <img src="docs/realtime-detection.png" alt="Live detections with class, confidence and estimated distance" width="420">
   <img src="docs/robot-platform.png" alt="Wheeled robot with stereo camera, RealSense L515 LiDAR and Intel NUC" width="380">
 </p>
 <p align="center"><sub>Left: live detections labelled with class, confidence and estimated distance. Right: the test robot with the stereo camera, LiDAR and onboard computer.</sub></p>
@@ -62,7 +62,7 @@ All numbers come from the thesis.
 - Iterative hyper-parameter tuning (L2 regularization, learning rate, mini-batch size, epochs, momentum).
 - Evaluation of the trained detector on a held-out test set.
 - Intrinsic and extrinsic calibration of the stereo camera and LiDAR: measurement errors, covariances and the rigid transform between the two sensor frames.
-- A Kalman-filter sensor-fusion framework, first in a MATLAB driving-scenario simulation and then in real time on the robot.
+- A Kalman-filter sensor-fusion framework, first in a MATLAB driving-scenario simulation and then live on the robot (about 1.44 s a frame on a GTX 1050).
 - Everything built in MATLAB 2020b (Deep Learning, Computer Vision, LiDAR, and Sensor Fusion and Tracking toolboxes).
 
 ## How to build

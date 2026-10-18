@@ -2,7 +2,7 @@
 
 **LaTeX Beamer slides for my Master's thesis defense in Aerospace Engineering at The University of Texas at Arlington (June 2021).**
 
-The talk shows how a wheeled robot detects objects with a YOLO-v3 deep neural network, live on the robot (about 1.44 s a frame for detection and position estimation on a GTX 1050; 59 ms average detection time per image in the offline test batch) and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. This repository holds two versions of the deck: the one I presented at the defense, and a longer extended version.
+The talk shows how a wheeled robot detects objects with a YOLO-v3 deep neural network (about 1.44 s a frame live on a GTX 1050 for detection and position estimation; 59 ms average detection time per image offline) and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. This repository holds two versions of the deck: the one I presented at the defense, and a longer extended version.
 
 ### [Slides as presented (PDF, 59 pages)](presented/MS-Thesis-Presentation.pdf)
 
